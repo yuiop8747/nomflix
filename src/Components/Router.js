@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Redirect,
   Switch,
@@ -18,7 +18,7 @@ export default () => (
       <Switch>
         {" "}
         {/* 두개의 컴포넌트가 동시에 rendering 되는것을 방지해주는 element */}
-        <Route path="/" exact={true} component={Home}></Route> {/* router는 route에게 기본적으로 props를 전달해준다. */}
+        <Route path="/" exact={true} component={Home}></Route> {/* router는 route에게 기본적으로 1개의 컴포넌트만 렌더링할 수 있다. */}
         <Route path="/tv" component={TV}></Route>
         <Route path="/search" component={Search}></Route>
         <Route path="/movie/:id" component={Detail}/>
